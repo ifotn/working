@@ -1,0 +1,21 @@
+<%- include ../partials/header.ejs %>
+
+<main class="container">
+    <h1>Add a New Article</h1>
+
+    <form method="post">
+
+        <fieldset class="form-group">
+            <label class="col-sm-2">Title: *</label>
+            <input name="title" required />
+        </fieldset>
+        <fieldset class="form-group">
+            <label class="col-sm-2">Content: *</label>
+            <textarea name="content" required></textarea>
+        </fieldset>
+        <row class="col-sm-offset-2">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </row>
+    </form>
+
+</main>

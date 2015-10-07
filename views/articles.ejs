@@ -1,0 +1,14 @@
+<%- include partials/header.ejs %>
+
+<main>
+    <h1>Articles</h1>
+
+    <a href="/add" title="Add">Add a New Article</a>
+
+    <ul class="list-group">
+        <% for (var i = 0; i < articles.length; i++) { %>
+           <li class="list-group-item"><a href="/articles<%= articles[i]._id%>" title="View Article"><%= articles[i].title%>
+           <br /><%= articles[i].created.toDateString()%></li>
+        <% }%>
+    </ul>
+</main>

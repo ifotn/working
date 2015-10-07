@@ -1,0 +1,24 @@
+<%- include ../partials/header.ejs %>
+
+<main class="container">
+    <h1>Edit Article</h1>
+
+    <form method="post">
+
+        <fieldset class="form-group">
+            <label class="col-sm-2">Title: *</label>
+            <input name="title" required value="<%= article.title %>" />
+        </fieldset>
+        <fieldset class="form-group">
+            <label class="col-sm-2">Content: *</label>
+            <textarea name="content" required><%= article.content %></textarea>
+        </fieldset>
+        <row class="col-sm-offset-2">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="/articles/delete/<%= article._id%>" title="Delete">
+                <button type="button" class="btn btn-primary" onclick="return confirm('Are you sure you want to delete this?');">Delete</button>
+            </a>
+        </row>
+    </form>
+
+</main>
